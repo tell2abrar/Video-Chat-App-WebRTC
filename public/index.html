@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Video Chat Application</title>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script> -->
+        <link href="/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h1 id="participant-role">Welcome</h1>
+        <div id="video-chat-lobby">
+            <h2 class="text">Video Chat Application</h2>
+            <input id="room-name" type="text" placeholder="Room Name" />
+            <button id="join">Join</button>
+        </div>
+
+        <div id="video-chat-room">
+            <video id="video-player" autoplay muted ></video>
+            <video id="local-video"  width="300" height="300" autoplay></video>
+            <video id="local-screen" width="300" height="300" autoplay></video>
+            <video id="remote-video" width="300" height="300" autoplay></video>
+            <video id="remote-screen" width="300" height="300" autoplay></video>
+        </div>
+
+        <div id="video-chat-local-control-buttons">
+            <button id="toggleAudiobutton" >mute audio</button>
+            <button id="toggleVideoButton">stop video</button>
+            <button id="toggleScreenShareButton">start screen share</button>
+        </div>
+
+        <div id="video-chat-remote-control-buttons">
+            <button id = "togglePeerAudioButton">mute peer audio</button>
+            <button id = "togglePeerVideoButton">stop peer video</button>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="video-stream-merger.js"></script>
+        <script src=chat.js></script>
+    </body>
+
+</html>
