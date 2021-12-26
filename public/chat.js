@@ -1,6 +1,7 @@
 console.log('connected');
 //Establishing the connection with websocket server
-const socket = io('http://127.0.0.1:3000');
+// const socket = io('http://127.0.0.1:3000');
+const socket = io('/');
 
 //Getting the DOM elements
 const $videoChatLobby = document.getElementById('video-chat-lobby');
